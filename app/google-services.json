@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "974588281470",
+    "firebase_url": "https://racing-story-ff9a0-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "racing-story-ff9a0",
+    "storage_bucket": "racing-story-ff9a0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974588281470:android:8b1647dc844d59a5bace2f",
+        "android_client_info": {
+          "package_name": "com.ddr.racingstory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "974588281470-v8eruc1q2o36j8a53rd2364npovejnjm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZyWyxiqUACOoTo9ZxQDvSq98fKDDRB0c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "974588281470-v8eruc1q2o36j8a53rd2364npovejnjm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

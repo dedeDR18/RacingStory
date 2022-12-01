@@ -5,6 +5,7 @@ plugins {
     id(libs.plugins.kotlin.kapt.get().pluginId)
     id(libs.plugins.kotlin.parcelize.get().pluginId)
     id(libs.plugins.hilt.plugin.get().pluginId)
+    id(libs.plugins.google.plugin.get().pluginId)
 }
 
 android {
@@ -53,6 +54,8 @@ android {
 
 dependencies {
 
+    implementation(project(":core-model"))
+
     // androidx
     implementation(libs.material)
     implementation(libs.androidx.fragment)
@@ -71,6 +74,9 @@ dependencies {
     androidTestImplementation(libs.hilt.testing)
     kaptAndroidTest(libs.hilt.compiler)
 
+    //firebase
+    implementation(libs.firebase.database.ktx)
+
     // coroutines
     implementation(libs.coroutines)
 
@@ -86,5 +92,8 @@ dependencies {
     // recyclerView
     implementation(libs.recyclerview)
     implementation(libs.baseAdapter)
+
+    //analytics
+    implementation(libs.firebase.analytics.ktx)
 
 }

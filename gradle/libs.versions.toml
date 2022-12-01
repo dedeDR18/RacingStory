@@ -44,6 +44,9 @@ mockitoKotlin = "2.2.0"
 mockitoInline = "3.5.13"
 appcompat = "1.5.1"
 constraintLayout = "2.1.4"
+firebase = "20.1.0"
+firebaseanalytics = "21.2.0"
+googleservices = "4.3.14"
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -55,13 +58,19 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 spotless = { id = "com.diffplug.spotless", version = "6.7.2" }
 hilt-plugin = { id = "dagger.hilt.android.plugin", version = "hilt" }
+google-plugin = { id = "com.google.gms.google-services"}
+
 
 [libraries]
 agp = { module = "com.android.tools.build:gradle", version.ref = "agp" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 ksp = { module = "com.google.devtools.ksp:symbol-processing", version.ref = "ksp" }
+google-gms = { group = "com.google.gms", name = "google-services", version.ref = "googleservices" }
+
 
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat"}
+firebase-database-ktx = { module = "com.google.firebase:firebase-database-ktx", version.ref = "firebase"}
+firebase-analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx", version.ref = "firebaseanalytics"}
 androidx-constraintLayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintLayout"}
 material = { module = "com.google.android.material:material", version.ref = "material" }
 androidx-fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "androidxFragment" }
