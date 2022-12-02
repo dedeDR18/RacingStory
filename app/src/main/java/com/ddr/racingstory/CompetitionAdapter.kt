@@ -13,18 +13,26 @@ import com.ddr.racingstory.databinding.ItemCompetitionBinding
 
 class CompetitionAdapter : RecyclerView.Adapter<CompetitionAdapter.ViewHolder>() {
 
-    val data = ArrayList<Competition>()
+    val listData = ArrayList<Competition>()
+
+    fun setData(data: List<Competition>?) {
+        if (data!!.isNotEmpty()) {
+            listData.clear()
+            listData.addAll(data)
+            notifyDataSetChanged()
+        }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder(
         LayoutInflater.from(parent.context).inflate(R.layout.item_competition, parent, false)
     )
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val currentData = data[position]
+        val currentData = listData[position]
         holder.bind(currentData)
     }
 
-    override fun getItemCount() = data.size
+    override fun getItemCount() = listData.size
 
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
