@@ -1,10 +1,11 @@
-package com.ddr.racingstory
+package com.ddr.racingstory.presentation.main
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ddr.core_model.Competition
+import com.ddr.racingstory.R
 import com.ddr.racingstory.databinding.ItemCompetitionBinding
 
 /**

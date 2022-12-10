@@ -15,25 +15,20 @@
         app:cardElevation="4dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-
+            android:padding="16dp"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:paddingStart="16dp"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp">
+            android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
                 android:textColor="@color/black"
-                android:textSize="60sp"
+                android:textSize="48sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="MotoGP" />
+                tools:text="1. MotoGP" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
