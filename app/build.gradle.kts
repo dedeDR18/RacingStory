@@ -64,6 +64,9 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.constraintLayout)
 
+    //lottie
+    implementation(libs.lottie)
+
 
     // data binding
     implementation(libs.bindables)

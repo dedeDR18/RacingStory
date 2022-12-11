@@ -47,6 +47,7 @@ constraintLayout = "2.1.4"
 firebase = "20.1.0"
 firebaseanalytics = "21.2.0"
 googleservices = "4.3.14"
+lottie = "5.2.0"
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -67,7 +68,7 @@ kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-pl
 ksp = { module = "com.google.devtools.ksp:symbol-processing", version.ref = "ksp" }
 google-gms = { group = "com.google.gms", name = "google-services", version.ref = "googleservices" }
 
-
+lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie"}
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat"}
 firebase-database-ktx = { module = "com.google.firebase:firebase-database-ktx", version.ref = "firebase"}
 firebase-analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx", version.ref = "firebaseanalytics"}
