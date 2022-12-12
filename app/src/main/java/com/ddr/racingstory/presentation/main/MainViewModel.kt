@@ -1,8 +1,11 @@
 package com.ddr.racingstory.presentation.main
 
 import android.util.Log
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.ddr.core_model.Competition
 import com.ddr.racingstory.data.MainRepository
 import com.ddr.racingstory.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -17,6 +20,9 @@ class MainViewModel @Inject constructor(
      val repo: MainRepository
 ): ViewModel(){
 
+    private val _liveDataCompetition = MutableLiveData<List<Competition>>()
+    val liveDataCompetition: LiveData<List<Competition>> = _liveDataCompetition
+
 
 //    init {
 //        getCompetition()
@@ -24,25 +30,7 @@ class MainViewModel @Inject constructor(
 
     fun getCompetition(){
         viewModelScope.launch {
-            repo.getCompetition().collect{ data ->
-                when (data) {
-                    is Resource.Success -> {
-                        Log.d("VIEWMODEL", "${data.model?.size}")
-                    }
-
-                    is Resource.Error -> {
-                        Log.d("VIEWMODEL", "Error !!!")
-                    }
-
-                    is Resource.Loading -> {
-                        Log.d("VIEWMODEL", "Loading...")
-                    }
-                    else -> {
-                        Log.d("VIEWMODEL", "else...")
-                    }
-                }
-
-            }
+            repo.fetchCompetition(_liveDataCompetition)
         }
     }
 }
