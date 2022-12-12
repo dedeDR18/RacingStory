@@ -1,5 +1,6 @@
 package com.ddr.racingstory.presentation.main
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,14 +15,14 @@ import com.ddr.racingstory.databinding.ItemCompetitionBinding
 
 class CompetitionAdapter : RecyclerView.Adapter<CompetitionAdapter.ViewHolder>() {
 
-    val listData = ArrayList<Competition>()
+    private val listData = mutableListOf<Competition>()
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setData(data: List<Competition>?) {
-        if (data!!.isNotEmpty()) {
-            listData.clear()
-            listData.addAll(data)
-            notifyDataSetChanged()
-        }
+        listData.clear()
+        listData.addAll(data ?: emptyList())
+        notifyDataSetChanged()
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder(
@@ -38,7 +39,7 @@ class CompetitionAdapter : RecyclerView.Adapter<CompetitionAdapter.ViewHolder>()
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val binding = ItemCompetitionBinding.bind(itemView)
-        fun bind(data: Competition){
+        fun bind(data: Competition) {
             binding.apply {
                 title.text = data.name
             }

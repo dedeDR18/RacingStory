@@ -17,8 +17,8 @@ import javax.inject.Inject
  */
 @HiltViewModel
 class MainViewModel @Inject constructor(
-     val repo: MainRepository
-): ViewModel(){
+    val repo: MainRepository
+) : ViewModel() {
 
     private val _liveDataCompetition = MutableLiveData<List<Competition>>()
     val liveDataCompetition: LiveData<List<Competition>> = _liveDataCompetition
@@ -28,9 +28,7 @@ class MainViewModel @Inject constructor(
 //        getCompetition()
 //    }
 
-    fun getCompetition(){
-        viewModelScope.launch {
-            repo.fetchCompetition(_liveDataCompetition)
-        }
+    fun getCompetition() {
+        repo.fetchCompetition(_liveDataCompetition)
     }
 }
