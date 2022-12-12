@@ -1,5 +1,7 @@
 package com.ddr.racingstory.data
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.ddr.core_model.Competition
 import com.ddr.racingstory.util.Resource
 import com.google.android.gms.common.api.Response
@@ -12,5 +14,5 @@ import javax.inject.Inject
 
 interface MainRepository {
 
-    fun getCompetition(): Flow<Resource<List<Competition>>>
+    fun fetchCompetition(liveData: MutableLiveData<List<Competition>>)
 }

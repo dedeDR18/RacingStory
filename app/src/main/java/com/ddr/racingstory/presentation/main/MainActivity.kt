@@ -14,10 +14,8 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private val exampleViewModel: MainViewModel by viewModels()
-    private lateinit var database: DatabaseReference
     private lateinit var listAdapter: CompetitionAdapter
     private lateinit var binding: ActivityMainBinding
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,14 +23,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        initRv()
         exampleViewModel.getCompetition()
-
-        //database = Firebase.database.reference
-        //initRv()
-        //getData()
+        observe()
     }
 
-    private fun initRv(){
+    private fun initRv() {
         listAdapter = CompetitionAdapter()
         binding.rvCompetition.apply {
             setHasFixedSize(true)
@@ -40,26 +36,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-//    private fun getData() {
-//        database.child("competition").addValueEventListener(object : ValueEventListener {
-//            override fun onDataChange(snapshot: DataSnapshot) {
-//                val list = ArrayList<Competition>()
-//                for (item in snapshot.children) {
-//                    val competition = item.getValue(Competition::class.java)
-//                    competition?.let {
-//                        list.add(it)
-//                    }
-//                    Log.d("MAIN", "competition = ${competition?.name}")
-//                    Log.d("MAIN", "competition = ${competition?.id}")
-//                }
-//                listAdapter.setData(list)
-//            }
-//
-//            override fun onCancelled(error: DatabaseError) {
-//                Log.d("MAIN", "error = ${error.message}")
-//            }
-//
-//        })
-//
-//    }
+    private fun observe() {
+        exampleViewModel.liveDataCompetition.observe(this) {
+            listAdapter.setData(it)
+        }
+    }
 }
