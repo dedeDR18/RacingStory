@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    //new pallete
+    <color name="new_white">#F6F6F6</color>
+    <color name="new_dark">#8785A2</color>
+    <color name="new_red">#FFC7C7</color>
+    <color name="new_pink">#FFE2E2</color>
+    <color name="new_orange">#F37878</color>
+
 </resources>
