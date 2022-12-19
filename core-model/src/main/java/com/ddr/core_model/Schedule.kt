@@ -9,5 +9,12 @@ data class Schedule(
     val id: String,
     val date: String,
     val nation: String,
-    val nameRace: String
-)
+    val raceName: String
+){
+    constructor(): this(
+        id = "",
+        date = "",
+        nation = "",
+        raceName = ""
+    )
+}

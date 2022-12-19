@@ -2,6 +2,8 @@ package com.ddr.racingstory.di
 
 import com.ddr.racingstory.data.MainRepository
 import com.ddr.racingstory.data.MainRepositoryImpl
+import com.ddr.racingstory.data.ScheduleRepository
+import com.ddr.racingstory.data.ScheduleRepositoryImpl
 import dagger.Binds
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
@@ -17,4 +19,7 @@ interface ViewModelModule {
 
     @Binds
     fun bindMainRepository(mainRepo: MainRepositoryImpl): MainRepository
+
+    @Binds
+    fun bindScheduleRepository(mainRepo: ScheduleRepositoryImpl): ScheduleRepository
 }

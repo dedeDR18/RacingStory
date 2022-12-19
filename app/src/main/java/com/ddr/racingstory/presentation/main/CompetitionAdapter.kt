@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ddr.core_model.Competition
+import com.ddr.core_model.Schedule
 import com.ddr.racingstory.R
 import com.ddr.racingstory.databinding.ItemCompetitionBinding
 
@@ -15,6 +16,8 @@ import com.ddr.racingstory.databinding.ItemCompetitionBinding
 
 class CompetitionAdapter : RecyclerView.Adapter<CompetitionAdapter.ViewHolder>() {
 
+
+    var onItemClick: ((Competition) -> Unit)? = null
     private val listData = mutableListOf<Competition>()
 
     @SuppressLint("NotifyDataSetChanged")
@@ -42,6 +45,10 @@ class CompetitionAdapter : RecyclerView.Adapter<CompetitionAdapter.ViewHolder>()
         fun bind(data: Competition) {
             binding.apply {
                 title.text = data.name
+
+                root.setOnClickListener {
+                    onItemClick?.invoke(data)
+                }
             }
         }
     }

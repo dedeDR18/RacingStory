@@ -14,5 +14,6 @@
     <color name="new_red">#FFC7C7</color>
     <color name="new_pink">#FFE2E2</color>
     <color name="new_orange">#F37878</color>
+    <color name="new_grey">#DDDDDD</color>
 
 </resources>
