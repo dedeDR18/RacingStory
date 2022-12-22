@@ -3,14 +3,9 @@ package com.ddr.racingstory.presentation.main
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.viewModels
-import com.ddr.core_model.Competition
 import com.ddr.racingstory.databinding.ActivityMainBinding
-import com.ddr.racingstory.presentation.detail.ScheduleActivity
-import com.google.firebase.database.*
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
+import com.ddr.racingstory.presentation.motogp_schedule.ScheduleActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

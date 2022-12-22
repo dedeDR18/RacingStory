@@ -1,12 +1,9 @@
-package com.ddr.racingstory.presentation.detail
+package com.ddr.racingstory.presentation.motogp_schedule
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
-import com.ddr.racingstory.R
 import com.ddr.racingstory.databinding.ActivityScheduleBinding
-import com.ddr.racingstory.presentation.main.CompetitionAdapter
-import com.ddr.racingstory.presentation.main.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

@@ -1,4 +1,4 @@
-package com.ddr.racingstory.presentation.detail
+package com.ddr.racingstory.presentation.motogp_schedule
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

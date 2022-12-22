@@ -1,16 +1,13 @@
-package com.ddr.racingstory.presentation.detail
+package com.ddr.racingstory.presentation.motogp_schedule
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.ddr.core_model.Competition
 import com.ddr.core_model.Schedule
 import com.ddr.racingstory.R
-import com.ddr.racingstory.databinding.ItemCompetitionBinding
 import com.ddr.racingstory.databinding.ItemScheduleMotogpBinding
-import com.ddr.racingstory.presentation.main.CompetitionAdapter
 
 /**
  * Created by Dede Dari Rahmadi on 18/12/22

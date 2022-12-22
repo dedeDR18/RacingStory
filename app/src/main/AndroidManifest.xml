@@ -16,7 +16,14 @@
         android:theme="@style/Theme.RacingStory"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.detail.ScheduleActivity"
+            android:name=".FormulaActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".presentation.motogp_schedule.ScheduleActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
