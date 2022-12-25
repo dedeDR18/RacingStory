@@ -19,71 +19,80 @@
             android:id="@+id/frameLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="65dp"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
                 android:background="@color/new_orange" />
 
             <TextView
-                android:text="@{schedule.id}"
                 android:id="@+id/round"
-                android:layout_width="30dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textAlignment="center"
+                android:text="@{schedule.id}"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                tools:text="GP1" />
-
+                tools:text="Round 1" />
 
         </FrameLayout>
 
         <TextView
-            android:text="@{schedule.raceName}"
             android:id="@+id/nameOfRace"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
             android:maxEms="18"
-            app:layout_constraintStart_toEndOf="@+id/frameLayout"
-            app:layout_constraintTop_toTopOf="parent"
+            android:text="@{schedule.raceName}"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nation"
             tools:text="Gran Premio Michelin de la Republica Argentina" />
 
         <TextView
-            android:text="@{schedule.nation}"
             android:id="@+id/nation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            app:layout_constraintStart_toEndOf="@+id/frameLayout"
-            app:layout_constraintTop_toBottomOf="@+id/nameOfRace"
+            android:layout_marginStart="8dp"
+            android:text="@{schedule.nation}"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateDay"
             tools:text="Portugal" />
 
         <TextView
-            android:text="@{schedule.date}"
-            android:id="@+id/date"
+            android:id="@+id/dateDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@{schedule.date}"
             android:textColor="@color/new_orange"
             android:textStyle="italic"
-            app:layout_constraintBottom_toTopOf="@+id/view"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:text="26 March 2023" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="03 - 05" />
+
+        <TextView
+            android:id="@+id/dateMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@{schedule.date}"
+            android:textColor="@color/new_orange"
+            android:textStyle="italic"
+            app:layout_constraintStart_toEndOf="@+id/dateDay"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="March" />
 
         <View
             android:id="@+id/view"
