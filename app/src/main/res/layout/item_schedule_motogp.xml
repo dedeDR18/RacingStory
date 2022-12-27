@@ -57,7 +57,7 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:maxEms="18"
+            android:maxEms="15"
             app:layout_constraintStart_toEndOf="@+id/frameLayout"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Gran Premio Michelin de la Republica Argentina" />
@@ -73,7 +73,7 @@
             tools:text="Portugal" />
 
         <TextView
-            android:text="@{schedule.date}"
+            android:text="@{schedule.date + ` `}"
             android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

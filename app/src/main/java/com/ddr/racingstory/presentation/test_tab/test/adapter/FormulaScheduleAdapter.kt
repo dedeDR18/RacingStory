@@ -1,9 +1,11 @@
-package com.ddr.racingstory.presentation.f1_schedule
+package com.ddr.racingstory.presentation.test_tab.test.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.ddr.core_model.Competition
 import com.ddr.core_model.Schedule
 import com.ddr.racingstory.R
 import com.ddr.racingstory.databinding.ItemScheduleFormulaBinding
@@ -15,6 +17,14 @@ import com.ddr.racingstory.databinding.ItemScheduleFormulaBinding
 class FormulaScheduleAdapter : RecyclerView.Adapter<FormulaScheduleAdapter.ViewHolder>() {
 
     private val listData = mutableListOf<Schedule>()
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun setData(data: List<Schedule>?) {
+        listData.clear()
+        listData.addAll(data ?: emptyList())
+        notifyDataSetChanged()
+
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
         LayoutInflater.from(parent.context).inflate(R.layout.item_schedule_formula, parent, false)

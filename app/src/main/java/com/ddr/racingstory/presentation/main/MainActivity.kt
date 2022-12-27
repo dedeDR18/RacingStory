@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import com.ddr.racingstory.databinding.ActivityMainBinding
 import com.ddr.racingstory.presentation.motogp_schedule.ScheduleActivity
+import com.ddr.racingstory.presentation.test_tab.test.FormulaTabActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -42,8 +43,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun handleOnItemClick(){
         listAdapter.onItemClick = {
-            val intent = Intent(this, ScheduleActivity::class.java)
-            startActivity(intent)
+            if (it.name.lowercase() == "formula 1"){
+                val intent = Intent(this, FormulaTabActivity::class.java)
+                startActivity(intent)
+            } else if (it.name.lowercase() == "motogp") {
+                val intent = Intent(this, ScheduleActivity::class.java)
+                startActivity(intent)
+            } else {
+
+            }
         }
     }
 }

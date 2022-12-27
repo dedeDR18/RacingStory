@@ -2,7 +2,9 @@ package com.ddr.racingstory.presentation.motogp_schedule
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.viewModels
+import com.ddr.racingstory.R
 import com.ddr.racingstory.databinding.ActivityScheduleBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -22,6 +24,9 @@ class ScheduleActivity : AppCompatActivity() {
         initRv()
         viewModel.getScheduleMotoGp()
         observe()
+        findViewById<Button>(R.id.btnBack).setOnClickListener {
+            onBackPressed()
+        }
     }
 
     private fun initRv() {
@@ -36,5 +41,9 @@ class ScheduleActivity : AppCompatActivity() {
         viewModel.liveDataScheduleMotogp.observe(this) {
             listAdapter.setData(it)
         }
+    }
+
+    override fun onBackPressed() {
+        onBackPressedDispatcher.onBackPressed()
     }
 }

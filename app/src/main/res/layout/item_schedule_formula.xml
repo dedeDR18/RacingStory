@@ -70,11 +70,11 @@
 
         <TextView
             android:id="@+id/dateDay"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="@{schedule.date}"
+            app:setDateDay="@{schedule.date}"
             android:textColor="@color/new_orange"
             android:textStyle="italic"
             app:layout_constraintStart_toStartOf="parent"
@@ -83,11 +83,11 @@
 
         <TextView
             android:id="@+id/dateMonth"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+
             android:layout_marginTop="8dp"
-            android:text="@{schedule.date}"
+            app:setDateMonth="@{schedule.date}"
             android:textColor="@color/new_orange"
             android:textStyle="italic"
             app:layout_constraintStart_toEndOf="@+id/dateDay"

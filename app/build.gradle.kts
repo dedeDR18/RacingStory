@@ -35,6 +35,7 @@ android {
 
     buildFeatures {
         dataBinding = true
+        viewBinding = true
     }
 
     hilt {
@@ -73,6 +74,7 @@ dependencies {
 
     // di
     implementation(libs.hilt.android)
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")
     kapt(libs.hilt.compiler)
     androidTestImplementation(libs.hilt.testing)
     kaptAndroidTest(libs.hilt.compiler)
